@@ -57,13 +57,13 @@ module Mongoid
               next unless doc
               append(doc)
               if persistable? || _creating?
-                ids[doc._id] = true
+                #ids[doc._id] = true
                 save_or_delay(doc, docs, inserts)
               else
                 existing = _base.send(foreign_key)
-                unless existing.include?(doc._id)
-                  existing.push(doc._id) and unsynced(_base, foreign_key)
-                end
+                #unless existing.include?(doc._id)
+                #  existing.push(doc._id) and unsynced(_base, foreign_key)
+                #end
               end
             end
             if persistable? || _creating?
