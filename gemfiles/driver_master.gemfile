@@ -1,0 +1,15 @@
+source "https://rubygems.org"
+
+gem 'bson', github: "mongodb/bson-ruby"
+gem 'mongo', github: "mongodb/mongo-ruby-driver"
+
+gem 'rake'
+gem 'actionpack', '~> 5.1'
+gem 'activemodel', '~> 5.1'
+
+group :test do
+  gem 'benchmark-ips'
+  gem 'rspec', '~> 3.7.0'
+end
+
+gemspec path: '..'
